@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Thrones</title>
+	<link rel="icon" type="image/png" href="rsc/icon.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<nav>
+		<img src="rsc/title.png" alt="">
+		<a href="home.html">Home</a>
+		<a href="docs.html">Docs</a>
+		<a href="archive.html">Archive</a>
+		<div class="flim"></div>
+	</nav>
+
+	<h3 class="intro">Based on the board game by Chad Anthony Randell:</h3>
+	<p class="intro">
+		"Thrones is a game designed to cultivate cunning and strategic maneuvering on a battlefield created by you, your opponent, and the battle between you.<br>
+		The struggle for supremacy will take many forms as your infantry melee, cavalry charge, and artillery fire.<br>
+		You may strike with your Throne’s royal guard or unleash a Dragon on any challenger to your claim. Not even fate itself is out of your influence and reach.<br>
+		Your enemies, however, are diverse, and their lands will be treacherous to a conqueror. Destruction of their armies is just one path to victory;<br>
+		If you succeed in claiming their Fortress as your own, a pretender’s family will surely plea for peace, which you can consider as their army disbands in defeat."
+	</p>
+	<div class="links">
+		<div><a href="https://www.kickstarter.com/projects/chadical/thrones-2nd-edition-fates-favor"><img src="rsc/kickstarter.jpg" alt="">Original</a></div>
+		<div><a href="https://github.com/Karwler/Thrones"><img src="rsc/github.png" alt="">Repository</a></div>
+	</div>
+	<div class="wallpapers">
+		<img src="rsc/landscape.jpg">
+		<img src="rsc/king.jpg">
+	</div>
+
+	<h1>Tiles</h1>
+	<div class="tiles">
+		<h3><img src="rsc/plains.jpg" alt="(yellow)">Plains</h3>
+		<h3><img src="rsc/forest.jpg" alt="(green)">Forest</h3>
+		<h3><img src="rsc/mountain.jpg" alt="(red)">Mountain</h3>
+		<h3><img src="rsc/water.jpg" alt="(blue)">Water</h3>
+		<h3><img src="rsc/fortress.png" alt="(brown)">Fortress</h3>
+	</div>
+
+	<h1>Pieces</h1>
+	<div class="pieces">
+		<h3>Rangers<img src="rsc/rangers.png" alt=""> (fierce vikings)</h3>
+		<ul>
+			<li>Can attack from Mountains.</li>
+			<li>When leaving a Forest tile, may choose to turn it into a Plains.</li>
+		</ul>
+		<h3>Spearmen<img src="rsc/spearmen.png" alt=""> (trained veterans)</h3>
+		<ul>
+			<li>Can attack onto Water.</li>
+			<li>May move any number of connected Water while moving.</li>
+		</ul>
+		<h3>Crossbowmen<img src="rsc/crossbowmen.png" alt=""> (short ranged)</h3>
+		<ul>
+			<li>Fires on an adjacent tile.</li>
+		</ul>
+		<h3>Catapult<img src="rsc/catapult.png" alt=""> (mid ranged)</h3>
+		<ul>
+			<li>Fires on a tile one or two tiles away in a single direction.</li>
+		</ul>
+		<h3>Trebuchet<img src="rsc/trebuchet.png" alt=""> (long ranged)</h3>
+		<ul>
+			<li>Fires on a tile three tiles away in a single direction including onto Forests.</li>
+		</ul>
+		<h3>Lancer<img src="rsc/lancer.png" alt=""> (light cavalry)</h3>
+		<ul>
+			<li>While on Plains, may move up to three non-Water tiles, or any number of connected Plains.</li>
+		</ul>
+		<h3>Warhorse<img src="rsc/warhorse.png" alt=""> (armored cavalry)</h3>
+		<ul>
+			<li>Cannot be engaged if it attacked during the previous turn.</li>
+			<li>May switch positions with any number of allied and/or enemy pieces except enemy Spearmen or enemies on Water tiles.</li>
+		</ul>
+		<h3>Elephant<img src="rsc/elephant.png" alt=""> (heavy cavalry)</h3>
+		<ul>
+			<li>Cannot be engaged if occupying a Plains except by a Dragon.</li>
+		</ul>
+		<h3>Dragon<img src="rsc/dragon.png" alt=""> (wild beast)</h3>
+		<ul>
+			<li>May move up to four tiles and attack in any single direction.</li>
+			<li>Can attack onto Water and from Mountains.</li>
+			<li>Enemy Dragon and ranged pieces block it’s movement. </li>
+		</ul>
+		<h3>Throne<img src="rsc/throne.png" alt=""> (royal guard)</h3>
+		<ul>
+			<li>Can attack any piece on any tile (including Elephant, Warhorse, and unbreached Fortresses).</li>
+		</ul>
+	</div>
+
+	<h1>Actions</h1>
+	<p>Must choose one:</p>
+	<ol>
+		<li>Move one piece, then may move a separate piece.</li>
+		<li>Switch two allied, adjacent pieces and may move a piece.</li>
+		<li>(Attack) Move onto an adjacent tile to remove it’s piece.</li>
+		<li>(Fire) Remove one piece on another tile without moving.</li>
+	</ol>
+	<p>Each piece can move one tile, one direction by default. Pieces can move over allied pieces if able. Ranged pieces cannot attack tiles, only fire on them.</p>
+
+	<h1>Terrain</h1>
+	<p>Each tile affects how a piece interacts with the battlefield and its opponents..</p>
+	<ul>
+		<li>Pieces cannot attack from Mountains. </li>
+		<li>Mountains cannot be fired over.</li>
+		<li>Mountains and Forests cannot be fired onto.</li>
+		<li>Cavalry pieces must be on Forests to attack Forests.</li>
+		<li>Forests cannot be attacked by Dragons.</li>
+		<li>Pieces cannot fire from Forests or Water.</li>
+		<li>Water cannot be attacked.</li>
+	</ul>
+
+	<h1>Fortresses</h1>
+	<p>A piece occupying a Fortress tile has high walls and battlements keeping it safe. The piece cannot be engaged (attacked or fired on) until the Fortress is breached.</p>
+	<ul>
+		<li>A successful attack or firing (determined by a Battle) breaches the Fortress tile.</li>
+		<li>A breached Fortress is flipped upside-down, and it’s piece can now be engaged next turn.</li>
+		<li>The Fortress does not restore (unbreach) itself until it is unoccupied at a turn’s end.</li>
+	</ul>
+	<p>
+		Warhorses can only switch positions with an enemy piece occupying a Fortress if it is breached.
+		Dragons must be able to occupy the tile outside the Fortress from the direction it would attack.<br>
+	</p>
+
+	<h1>Battle</h1>
+	<p>Pieces engage in battle for Fortresses, and the fog of war makes its outcome fearfully unclear. The attacker flips a coin, rolls a die, or uses the #2 method from “Gameplay” to discover if it wins or loses.</p>
+	<ul>
+		<li><b>Win the Battle with an even number: </b>the attack/firing succeeds.</li>
+		<li><b>Lose the Battle with an odd number: </b>the piece cannot fire this turn.</li>
+	</ul>
+	<p>If the battle is lost during an attack, your opponent may move that piece to any adjacent tile. In either loss, the player can attack, fire, or move and/or switch other pieces to finish the turn, or attack the Fortress again, if there is a piece capable of it.</p>
+
+	<h1>Fate’s Favor</h1>
+	<p>
+		When the Throne occupies a Fortress different from the one it did previously (or starts the game in its homeland Fortress), it gains a special, single-use Fate’s Favor tile. Their effects are listed below.<br>
+		A player can use Fate’s Favor effects in addition to a Move and/or Switch Action only.
+	</p>
+	<ul>
+		<li><b>Hasten: </b>Adds one tile of movement to any allied piece that player controls.</li>
+		<li><b>Assault: </b>One additional move and/or switch of different, allied piece(s). </li>
+		<li><b>Conspire: </b>A chosen, announced piece cannot engage or be engaged next turn.</li>
+		<li><b>Deceive: </b>Switch any two adjacent enemy pieces.</li>
+	</ul>
+	<p>There is a max of one of each FF tiles per player. Any number of FF tiles can be played in one turn. A player needs to reveal what FF tile they have only when they use that particular effect. Don’t let your opponent see it!</p>
+
+	<h1>Game Setup</h1>
+	<ol>
+		<li>Each player gets 13 Pieces, 14 Plains, 9 Forest, 7 Water, 5 Mountain, and 1 Fortress.</li>
+		<li>Players choose even or odd, and hold numbers on their hands behind their backs and reveal them simultaneously; the sum of the numbers decides who goes first. A sum of 10 requires a redo. Battles can also be resolved this way.</li>
+		<li>Set the rule board as a screen so players cannot see their opponent's homeland; players place their tiles and pieces. Homeland Fortresses cannot border game board boundaries.</li>
+		<li>Each player is given 4 tiles (one of each type) and puts them between their front tile row and the screen, intended as where they want them placed in the middle row.</li>
+		<li>Remove screen. If both players have set middle row tiles for the same contested place, first place all uncontested tiles down in the middle row; then move both contested tiles to the leftmost open space of the player that is moving first, starting from their left.</li>
+		<li>The middle row Fortress occupies wherever no tile was set, after all 8 tiles are set.</li>
+		<li>The game starts! Each player cannot attack/fire on their first turn. Winning requires the removal of your opponent's Throne or occupying your opponent's homeland Fortress with your Throne.</li>
+	</ol>
+
+	<h1>Variants</h1>
+
+	<h2>Victory Points</h2>
+	<ul>
+		<li>Two players set their homelands up normally, but are not provided Fortresses.</li>
+		<li>After setup, 3 Fortresses are placed in the middle row, equidistant from each other, or randomized, based on preference.</li>
+		<li>At the end of each turn, a player gets 1 Victory Point for each Fortress they occupy with an allied piece</li>
+		<li>A total of 3 VPs per turn, if all three Forts are occupied, can be earned; the first player to 21 wins.</li>
+	</ul>
+
+	<h2>Ports</h2>
+	<p>Any Water tiles set on the game board's borders are considered Port tiles in this gametype; a Port allows a unit occupying it to occupy/attack any other Port tile.</p>
+
+	<h2>Row Balancing</h2>
+	<p>Lay pieces and home tiles with at least one of each of the 4 tile types in each of the 4 rows.</p>
+
+	<h2>Homefront</h2>
+	<ul>
+		<li>Players may use their Throne to establish one Farm and one City midgame by moving the Throne on them and placing a second tile on top of the occupied tile.</li>
+		<ul>
+			<li><b>Farm: </b>Lancers, Raiders</li>
+			<li><b>City: </b>Legionaries, Catapults, Elephants</li>
+			<li><b>Fortress: </b>Crossbowmen, Warhorses, Trebuchets</li>
+		</ul>
+		<li>Thrones can also rebuild destroyed Fortresses correspondingly, which do not rebuild in this gametype.</li>
+		<li>Throne and Dragon pieces cannot be respawned.</li>
+		<li>Farm and City tiles must be unoccupied to spawn a new piece, and be at least two tiles away from another spawning tile.</li>
+		<li>City tiles cannot be destroyed, only occupied, and cannot be established before a Farm has been established. Spawning a piece replaces moving, switching, firing, and attacking for that turn; establishing Farm or City or rebuilding a Fortress does not.</li>
+	</ul>
+
+	<h2>Set Piece Battle</h2>
+	<p>During setup (when players set their tiles and pieces) they must choose 10 of the 13 pieces. The 3 they do not choose are left out of the battle. Must include Throne as 1 of 10.</p>
+</body>
+</html>
